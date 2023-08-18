@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Open+Sans:wght@500&family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* |RE-USED STYLES| */
+
+.btn-area {
+    width: 100%;
+    height: 50%;
+}
+
+.btn {
+    margin: 1rem 2rem;
+    height: 2rem;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50px 50px 50px 50px;
+    font-size: 20px;
+    max-width: 200px;
+    width: 100%;
+    transition: .3s;
+}
+
+/* | GENERAL | */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+/* | NAV BAR | */
+header {
+    background-color: #8200ce;
+    width: 100%;
+}
+
+header h1 {
+    padding: 1rem;
+    color: #fff;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+/* | MAIN | */
+
+main {
+    background-color: #fff6de;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 960px;
+    width: 90%;
+    margin: 2rem 3rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 15px #0000004d;
+    display: flex;
+    flex-direction: column;
+}
+
+/* | list input | 
+    input and Submit button */
+
+.add-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 14rem;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    min-height: 50%;
+    outline: none;
+    border: none;
+    box-shadow: inset 0 0 5px #0000004d;
+    border-radius: 7px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: .9px;
+}
+
+.btn:hover {
+    background-color: #8200ce;
+}
+
+/* | list items | 
+    Note list with delete button    */
+
+.list-item {
+    list-style-type: none;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    margin: 1rem 0;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #0000004d;
+    line-height: 1.5rem;
+    position: relative;
+}
+
+/* Delete icon */
+
+.delete {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    margin: .5rem;
+}
+
+.del-icon {
+    width: 1rem;
+}
+
+@media (max-width: 486px) {
+    .btn {
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-area {
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn {
+        margin: 1rem 0;
+    }
+}
