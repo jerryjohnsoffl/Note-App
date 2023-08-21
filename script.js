@@ -3,12 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const noteInput = document.getElementById('note-input');
     const saveButton = document.getElementById('save-button');
 
+    const delay = 500;
+    let touchStartTimeStamp;
+
     const savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
     savedNotes.forEach(note => {
         addToNoteList(note);
     })
 
     saveButton.addEventListener('click', (e) => {
+        
         const noteValue = noteInput.value;
         if (noteValue.trim() !== "") {
             savedNotes.push(noteValue);
@@ -16,7 +20,40 @@ document.addEventListener('DOMContentLoaded', () => {
             addToNoteList(noteValue);
         }
         e.preventDefault();
+        this.classList.toggle('active');
         noteInput.value = "";
+    })
+
+    saveButton.addEventListener('touchstart', (e) => {
+        
+        const noteValue = noteInput.value;
+        if (noteValue.trim() !== "") {
+            savedNotes.push(noteValue);
+            localStorage.setItem('notes', JSON.stringify(savedNotes))
+            addToNoteList(noteValue);
+        }
+        touchStartTimeStamp = Date.now();
+        e.target.classList.toggle('active');
+        noteInput.value = "";
+    })
+
+    saveButton.addEventListener('touchend', (e) => {
+        
+        
+        const touchEndTimeStamp = Date.now()
+        const elapsed = (touchEndTimeStamp - touchStartTimeStamp) * 10;
+        if (elapsed >= delay) {
+            setTimeout( () => {
+                e.target.classList.toggle("active")
+            })
+        }
+    })
+
+    saveButton.addEventListener('mouseenter', (e) => {
+        e.target.classList.toggle("active");
+    })
+    saveButton.addEventListener('mouseleave', (e) => {
+        e.target.classList.toggle("active");
     })
 
     function addToNoteList(note) {

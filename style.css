@@ -101,8 +101,7 @@ textarea {
     letter-spacing: .9px;
 }
 
-.btn:hover,
-.btn:active {
+.btn.active {
     background-color: #3271ff;
 }
 
