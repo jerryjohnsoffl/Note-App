@@ -45,6 +45,27 @@
     transition: .3s;
 }
 
+/* | list items | 
+    Note list with delete button    */
+
+    .list-item {
+        list-style-type: none;
+        overflow: hidden;
+        overflow-wrap: break-word;
+        max-width: 100%;
+        margin: 1rem 0;
+        padding: 1rem 2.5rem;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 0 10px #0000004d;
+        line-height: 1.5rem;
+        position: relative;
+        font-size: .9rem;
+        font-weight: 400;
+        color: #444444;
+    }
+    
+
 /* | GENERAL | */
 
 body {
@@ -105,26 +126,6 @@ textarea {
     background-color: #3271ff;
 }
 
-/* | list items | 
-    Note list with delete button    */
-
-.list-item {
-    list-style-type: none;
-    overflow: hidden;
-    overflow-wrap: break-word;
-    max-width: 100%;
-    margin: 1rem 0;
-    padding: 1rem 2.5rem;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #0000004d;
-    line-height: 1.5rem;
-    position: relative;
-    font-size: .7rem;
-    font-weight: 400;
-    color: #444444;
-}
-
 /* Delete icon */
 
 .delete {
@@ -164,5 +165,9 @@ textarea {
         max-width: 100%;
         margin-top: 2rem;
         margin-bottom: -2.5rem;
+    }
+
+    .list-item {
+        font-size: .8rem;
     }
 }

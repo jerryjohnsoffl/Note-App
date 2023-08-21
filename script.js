@@ -31,21 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('notes', JSON.stringify(savedNotes))
             addToNoteList(noteValue);
         }
-        touchStartTimeStamp = Date.now();
-        e.target.classList.toggle('active');
+        e.preventDefault();
         noteInput.value = "";
     })
 
     saveButton.addEventListener('touchend', (e) => {
-        
-        
-        const touchEndTimeStamp = Date.now()
-        const elapsed = (touchEndTimeStamp - touchStartTimeStamp) * 10;
-        if (elapsed >= delay) {
-            setTimeout( () => {
-                e.target.classList.toggle("active")
-            })
+        if (e.target.classList.contains('active')) {
+            e.target.classList.remove('active');
         }
+        e.preventDefault()
+        noteInput.value = "";
     })
 
     saveButton.addEventListener('mouseenter', (e) => {
