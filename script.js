@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
             addToNoteList(noteValue);
         }
         e.preventDefault();
-        this.classList.toggle('active');
         noteInput.value = "";
     })
 
