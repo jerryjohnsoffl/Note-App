@@ -8,13 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
         addToNoteList(note);
     })
 
-    saveButton.addEventListener('click', () => {
+    saveButton.addEventListener('click', (e) => {
         const noteValue = noteInput.value;
         if (noteValue.trim() !== "") {
             savedNotes.push(noteValue);
             localStorage.setItem('notes', JSON.stringify(savedNotes))
             addToNoteList(noteValue);
         }
+        e.preventDefault();
+        noteInput.value = "";
     })
 
     function addToNoteList(note) {
