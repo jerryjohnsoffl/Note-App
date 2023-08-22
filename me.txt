@@ -1,5 +1,0 @@
-{{#user}}
-Name: Jerry
-Skills: HTML, CSS, JS, Bootstrap, React.js
-Email: test@gmail.com
-{{/user}}
