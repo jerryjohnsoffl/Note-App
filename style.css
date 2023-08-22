@@ -43,6 +43,7 @@
     max-width: 200px;
     width: 100%;
     transition: .3s;
+    cursor: pointer;
 }
 
 /* | list items | 
