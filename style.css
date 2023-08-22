@@ -7,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* |RE-USED STYLES| */
+/* ====RE-USED STYLES==== */
 
 .container {
     max-width: 960px;
@@ -67,7 +67,7 @@
     }
     
 
-/* | GENERAL | */
+/* ==== GENERAL ==== */
 
 body {
     display: flex;
@@ -76,7 +76,7 @@ body {
     width: 100vw;
 }
 
-/* | NAV BAR | */
+/* ==== NAV BAR ==== */
 header {
     background-color: #3271ff;
     width: 100%;
@@ -89,7 +89,7 @@ header h1 {
     font-weight: 600;
 }
 
-/* | MAIN | */
+/* ==== MAIN ==== */
 
 main {
     background-color: #eeeeee;
@@ -99,7 +99,7 @@ main {
     padding: 2rem 0;
 }
 
-/* | list input | 
+/* ==== list input ==== 
     input and Submit button */
 
 .add-item {
@@ -127,7 +127,7 @@ textarea {
     background-color: #3271ff;
 }
 
-/* Delete icon */
+/* ====Delete icon==== */
 
 .delete {
     position: absolute;
